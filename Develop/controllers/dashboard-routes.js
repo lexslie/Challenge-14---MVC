@@ -56,7 +56,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
     .then(dbPostData => {
         if (!dbPostData) {
             res.status(404).json({
-                message: "No post was found with this id"
+                message: "There was no post was found with this id."
             });
             return;
         }
