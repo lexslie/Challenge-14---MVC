@@ -1,0 +1,23 @@
+<a href="/Develop/views/layouts/dashboard.handlebars" class="go-back"> &larr; Take me back to the dashboard</a>
+<br>
+<br>
+
+{{> post-info post}}
+
+{{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Submit comment!</button>
+    </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/Develop/public/js/comment.js"></script>
+{{/if}}
